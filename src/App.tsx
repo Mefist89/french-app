@@ -11,6 +11,7 @@ function App() {
   const [selectedModule, setSelectedModule] = useState<number | null>(null);
   const [moduleScore, setModuleScore] = useState<number>(0);
   const [totalExercises, setTotalExercises] = useState<number>(5);
+  const [moduleKey, setModuleKey] = useState(0); // Добавили ключ для сброса модуля
   
   const [moduleProgress, setModuleProgress] = useState<ModuleProgress>({
     1: 5, 2: 3, 3: 0, 4: 0, 5: 0, 6: 0, 7: 0, 
@@ -20,6 +21,7 @@ function App() {
   const handleModuleSelect = (moduleId: number) => {
     setSelectedModule(moduleId);
     setCurrentScreen('module');
+    setModuleKey(moduleKey + 1); // Увеличиваем ключ при выборе модуля
   };
 
   const handleBackToMenu = () => {
@@ -43,6 +45,7 @@ function App() {
 
   const handleRetryModule = () => {
     setCurrentScreen('module');
+    setModuleKey(moduleKey + 1); // Увеличиваем ключ для полного сброса
   };
 
   return (
@@ -56,6 +59,7 @@ function App() {
 
       {currentScreen === 'module' && selectedModule && (
         <ModuleScreen
+          key={moduleKey} // Добавили key для полного сброса модуля
           moduleId={selectedModule}
           onBack={handleBackToMenu}
           onComplete={handleModuleComplete}

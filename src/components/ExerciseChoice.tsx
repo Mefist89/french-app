@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { Volume2, CheckCircle, XCircle, ArrowRight } from 'lucide-react';
 import type { ExerciseChoice as ExerciseChoiceType } from '../types';
 
@@ -11,13 +11,53 @@ interface ExerciseChoiceProps {
 const ExerciseChoice = ({ exercise, onComplete, onNext }: ExerciseChoiceProps) => {
   const [selectedAnswer, setSelectedAnswer] = useState<number | null>(null);
   const [showResult, setShowResult] = useState(false);
+  const [isPlaying, setIsPlaying] = useState(false);
 
   const playAudio = (text: string) => {
-    const utterance = new SpeechSynthesisUtterance(text);
-    utterance.lang = 'fr-FR';
-    utterance.rate = 0.8;
-    window.speechSynthesis.speak(utterance);
+    return new Promise<void>((resolve) => {
+      const utterance = new SpeechSynthesisUtterance(text);
+      utterance.lang = 'fr-FR';
+      utterance.rate = 0.8;
+      utterance.onend = () => resolve();
+      window.speechSynthesis.speak(utterance);
+    });
   };
+
+  const playSequence = async () => {
+    if (isPlaying || !exercise.audio || !exercise.display) return;
+    
+    setIsPlaying(true);
+    
+    // Для модуля алфавита (если есть display формата "A - Avion")
+    if (exercise.display.includes(' - ')) {
+      const [letter, word] = exercise.display.split(' - ');
+      
+      // 1. Произносим букву
+      await playAudio(letter);
+      await new Promise(resolve => setTimeout(resolve, 500)); // пауза 0.5 сек
+      
+      // 2. Произносим слово
+      await playAudio(word);
+      await new Promise(resolve => setTimeout(resolve, 500)); // пауза 0.5 сек
+      
+      // 3. Снова произносим букву для закрепления
+      await playAudio(letter);
+    } else {
+      // Обычное произношение для других упражнений
+      await playAudio(exercise.audio);
+    }
+    
+    setIsPlaying(false);
+  };
+
+  // Автоматически проигрываем при загрузке упражнения
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      playSequence();
+    }, 500);
+    
+    return () => clearTimeout(timer);
+  }, [exercise.id]);
 
   const handleAnswer = (answerIndex: number) => {
     if (showResult) return;
@@ -38,7 +78,7 @@ const ExerciseChoice = ({ exercise, onComplete, onNext }: ExerciseChoiceProps) =
       <div className="text-center mb-8">
         <div className="text-8xl mb-4">{exercise.image}</div>
         {exercise.display && (
-          <div className="text-9xl font-bold text-purple-600 mb-4">
+          <div className="text-6xl font-bold text-purple-600 mb-4">
             {exercise.display}
           </div>
         )}
@@ -47,11 +87,16 @@ const ExerciseChoice = ({ exercise, onComplete, onNext }: ExerciseChoiceProps) =
         </h2>
         {exercise.audio && (
           <button
-            onClick={() => playAudio(exercise.audio!)}
-            className="bg-blue-500 text-white px-6 py-3 rounded-xl flex items-center gap-2 mx-auto hover:bg-blue-600 transition"
+            onClick={playSequence}
+            disabled={isPlaying}
+            className={`px-6 py-3 rounded-xl flex items-center gap-2 mx-auto transition ${
+              isPlaying 
+                ? 'bg-gray-400 text-white cursor-not-allowed' 
+                : 'bg-blue-500 text-white hover:bg-blue-600'
+            }`}
           >
             <Volume2 className="w-6 h-6" />
-            Послушать
+            {isPlaying ? 'Проигрывается...' : 'Послушать ещё раз'}
           </button>
         )}
       </div>

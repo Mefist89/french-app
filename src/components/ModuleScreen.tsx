@@ -1,6 +1,6 @@
 import { useState } from 'react';
 import { Star, Home } from 'lucide-react';
-import { getModuleExercises } from '../data/exercises';
+import { getModuleExercises } from '../data/exercises/index';
 import ExerciseChoice from './ExerciseChoice';
 import ExerciseMatch from './ExerciseMatch';
 import ExerciseLetters from './ExerciseLetters';
@@ -35,6 +35,7 @@ const ModuleScreen = ({ moduleId, onBack, onComplete }: ModuleScreenProps) => {
   const [currentExercise, setCurrentExercise] = useState(0);
   const [score, setScore] = useState(0);
   const [completedExercises, setCompletedExercises] = useState<number[]>([]);
+  const [resetKey, setResetKey] = useState(0); // Добавили ключ для сброса
 
   const currentEx = exercises[currentExercise];
   const moduleName = moduleNames[moduleId] || `Модуль ${moduleId}`;
@@ -49,6 +50,7 @@ const ModuleScreen = ({ moduleId, onBack, onComplete }: ModuleScreenProps) => {
   const handleNext = () => {
     if (currentExercise < exercises.length - 1) {
       setCurrentExercise(currentExercise + 1);
+      setResetKey(resetKey + 1); // Увеличиваем ключ при переходе к следующему упражнению
     } else {
       onComplete(score, exercises.length);
     }
@@ -115,6 +117,7 @@ const ModuleScreen = ({ moduleId, onBack, onComplete }: ModuleScreenProps) => {
         <div className="bg-white rounded-3xl shadow-2xl p-8">
           {currentEx.type === 'choice' && (
             <ExerciseChoice
+              key={resetKey} // Добавили key для сброса состояния
               exercise={currentEx}
               onComplete={handleExerciseComplete}
               onNext={handleNext}
@@ -123,6 +126,7 @@ const ModuleScreen = ({ moduleId, onBack, onComplete }: ModuleScreenProps) => {
 
           {currentEx.type === 'match' && (
             <ExerciseMatch
+              key={resetKey} // Добавили key для сброса состояния
               exercise={currentEx}
               onComplete={handleExerciseComplete}
               onNext={handleNext}
@@ -131,6 +135,7 @@ const ModuleScreen = ({ moduleId, onBack, onComplete }: ModuleScreenProps) => {
 
           {currentEx.type === 'letters' && (
             <ExerciseLetters
+              key={resetKey} // Добавили key для сброса состояния
               exercise={currentEx}
               onComplete={handleExerciseComplete}
               onNext={handleNext}
@@ -139,6 +144,7 @@ const ModuleScreen = ({ moduleId, onBack, onComplete }: ModuleScreenProps) => {
 
           {currentEx.type === 'pronunciation' && (
             <ExercisePronunciation
+              key={resetKey} // Добавили key для сброса состояния
               exercise={currentEx}
               onComplete={handleExerciseComplete}
               onNext={handleNext}
@@ -147,6 +153,7 @@ const ModuleScreen = ({ moduleId, onBack, onComplete }: ModuleScreenProps) => {
 
           {currentEx.type === 'grammar' && (
             <ExerciseGrammar
+              key={resetKey} // Добавили key для сброса состояния
               exercise={currentEx}
               onComplete={handleExerciseComplete}
               onNext={handleNext}
