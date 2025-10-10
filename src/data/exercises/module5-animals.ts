@@ -6,6 +6,7 @@ export const module5Exercises: Exercise[] = [
     type: 'choice',
     question: 'Как сказать "Собака" по-французски?',
     image: '🐕',
+    display: 'Le chien',
     options: ['Le chien', 'Le chat', 'L\'oiseau', 'Le lapin'],
     correct: 0,
     audio: 'Le chien'
@@ -15,15 +16,17 @@ export const module5Exercises: Exercise[] = [
     type: 'choice',
     question: 'Как сказать "Кошка" по-французски?',
     image: '🐈',
+    display: 'Le chat',
     options: ['Le hamster', 'Le chat', 'L\'oiseau', 'Le chien'],
     correct: 1,
     audio: 'Le chat'
   },
-  {
+ {
     id: 3,
     type: 'choice',
     question: 'Как сказать "Птица" по-французски?',
     image: '🐦',
+    display: 'L\'oiseau',
     options: ['Le lapin', 'Le perroquet', 'L\'oiseau', 'Le chat'],
     correct: 2,
     audio: 'L\'oiseau'
@@ -33,6 +36,7 @@ export const module5Exercises: Exercise[] = [
     type: 'choice',
     question: 'Как сказать "Хомяк" по-французски?',
     image: '🐹',
+    display: 'Le hamster',
     options: ['Le hamster', 'Le lapin', 'Le chien', 'L\'ours'],
     correct: 0,
     audio: 'Le hamster'
@@ -42,6 +46,7 @@ export const module5Exercises: Exercise[] = [
     type: 'choice',
     question: 'Как сказать "Попугай" по-французски?',
     image: '🦜',
+    display: 'Le perroquet',
     options: ['L\'oiseau', 'Le perroquet', 'Le chat', 'Le chien'],
     correct: 1,
     audio: 'Le perroquet'
@@ -51,6 +56,7 @@ export const module5Exercises: Exercise[] = [
     type: 'choice',
     question: 'Как сказать "Кролик" по-французски?',
     image: '🐰',
+    display: 'Le lapin',
     options: ['Le hamster', 'L\'ours', 'Le lapin', 'Le chien'],
     correct: 2,
     audio: 'Le lapin'
@@ -60,6 +66,7 @@ export const module5Exercises: Exercise[] = [
     type: 'choice',
     question: 'Как сказать "Медведь" по-французски?',
     image: '🐻',
+    display: 'L\'ours',
     options: ['Le chien', 'L\'ours', 'Le chat', 'Le lapin'],
     correct: 1,
     audio: 'L\'ours'
@@ -69,6 +76,7 @@ export const module5Exercises: Exercise[] = [
     type: 'choice',
     question: 'Как сказать "Лошадь" по-французски?',
     image: '🐴',
+    display: 'Le cheval',
     options: ['Le cheval', 'Le chat', 'Le chien', 'L\'ours'],
     correct: 0,
     audio: 'Le cheval'
@@ -78,6 +86,7 @@ export const module5Exercises: Exercise[] = [
     type: 'choice',
     question: 'Как сказать "Корова" по-французски?',
     image: '🐄',
+    display: 'La vache',
     options: ['Le lapin', 'La vache', 'Le chien', 'Le chat'],
     correct: 1,
     audio: 'La vache'
@@ -87,6 +96,7 @@ export const module5Exercises: Exercise[] = [
     type: 'choice',
     question: 'Как сказать "Свинья" по-французски?',
     image: '🐷',
+    display: 'Le cochon',
     options: ['Le cochon', 'Le hamster', 'L\'oiseau', 'Le lapin'],
     correct: 0,
     audio: 'Le cochon'
