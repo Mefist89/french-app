@@ -35,22 +35,22 @@ const CompletionScreen = ({ score, total, onBackToMenu, onRetry }: CompletionScr
         <div className="mb-8">
           {score === total && (
             <p className="text-2xl text-green-600 font-bold">
-              🎉 Идеально! Ты супер! 🎉
+              🎉 Perfect! Ești minunat! 🎉
             </p>
           )}
           {score >= total * 0.8 && score < total && (
             <p className="text-2xl text-blue-600 font-bold">
-              👏 Отличная работа! Почти идеально!
+              👏 Foarte bine! Aproape perfect!
             </p>
           )}
           {score >= total * 0.6 && score < total * 0.8 && (
             <p className="text-2xl text-purple-600 font-bold">
-              👍 Хорошо! Продолжай стараться!
+              👍 Bine! Continuă să te străduiești!
             </p>
           )}
           {score < total * 0.6 && (
             <p className="text-2xl text-orange-600 font-bold">
-              💪 Попробуй ещё раз, у тебя получится!
+              💪 Încearcă din nou, poți reuși!
             </p>
           )}
         </div>
@@ -62,13 +62,13 @@ const CompletionScreen = ({ score, total, onBackToMenu, onRetry }: CompletionScr
             className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-4 rounded-2xl text-xl font-bold hover:scale-105 transform transition flex items-center gap-2"
           >
             <Home className="w-6 h-6" />
-            В меню
+            Înapoi la meniu
           </button>
           <button
             onClick={onRetry}
             className="bg-gradient-to-r from-green-500 to-teal-500 text-white px-8 py-4 rounded-2xl text-xl font-bold hover:scale-105 transform transition"
           >
-            Пройти ещё раз
+            Repetă exercițiul
           </button>
         </div>
       </div>

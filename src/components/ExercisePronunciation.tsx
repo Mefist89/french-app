@@ -57,7 +57,7 @@ const ExercisePronunciation = ({ exercise, onComplete, onNext }: ExercisePronunc
     const SpeechRecognitionAPI = window.SpeechRecognition || window.webkitSpeechRecognition;
     
     if (!SpeechRecognitionAPI) {
-      alert('Извините, ваш браузер не поддерживает распознавание речи. Попробуйте Chrome.');
+      alert('Ne pare rău, browserul tău nu suportă recunoașterea vocală. Încearcă Chrome.');
       return;
     }
 
@@ -82,21 +82,21 @@ const ExercisePronunciation = ({ exercise, onComplete, onNext }: ExercisePronunc
         newFeedback = {
           correct: true,
           score: Math.round(confidence * 100),
-          message: 'Отлично! Произношение почти идеальное! 🎉'
+          message: 'Excelent! Pronunția este aproape perfectă! 🎉'
         };
         onComplete(true);
       } else if (similarity > 0.5) {
         newFeedback = {
           correct: false,
           score: Math.round(confidence * 70),
-          message: 'Хорошо, но можно лучше. Попробуй ещё раз! 👍'
+          message: 'Bine, dar se poate îmbunătăți. Încearcă din nou! 👍'
         };
         onComplete(false);
       } else {
         newFeedback = {
           correct: false,
           score: Math.round(confidence * 40),
-          message: 'Попробуй ещё раз. Послушай внимательно и повтори! 🎧'
+          message: 'Încearcă din nou. Ascultă atent și repetă! 🎧'
         };
         onComplete(false);
       }
@@ -154,11 +154,11 @@ const ExercisePronunciation = ({ exercise, onComplete, onNext }: ExercisePronunc
             }`}
           >
             <Mic className="w-8 h-8 inline-block mr-3" />
-            {isRecording ? 'Запись... Говори!' : 'Нажми и произнеси'}
+            {isRecording ? 'Se înregistrează... Vorbă!' : 'Apasă și pronunță'}
           </button>
           {recognizedText && (
             <div className="mt-6 bg-gray-100 p-4 rounded-xl">
-              <p className="text-gray-600">Ты сказал:</p>
+              <p className="text-gray-600">Ai spus:</p>
               <p className="text-xl font-bold text-gray-800">{recognizedText}</p>
             </div>
           )}
@@ -185,13 +185,13 @@ const ExercisePronunciation = ({ exercise, onComplete, onNext }: ExercisePronunc
             <div className="text-4xl font-bold text-purple-600 mb-2">
               {feedback.score}%
             </div>
-            <p className="text-gray-600">Оценка AI</p>
+            <p className="text-gray-60">Evaluare AI</p>
           </div>
           <button
             onClick={handleNext}
             className="bg-gradient-to-r from-green-500 to-blue-500 text-white px-8 py-4 rounded-2xl text-xl font-bold flex items-center gap-2 mx-auto hover:scale-105 transform transition"
           >
-            Дальше <ArrowRight className="w-6 h-6" />
+            Mai departe <ArrowRight className="w-6 h-6" />
           </button>
         </div>
       )}

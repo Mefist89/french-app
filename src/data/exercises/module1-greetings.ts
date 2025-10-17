@@ -4,7 +4,7 @@ export const module1Exercises: Exercise[] = [
   {
     id: 1,
     type: 'choice',
-    question: 'Как сказать "Привет" по-французски?',
+    question: 'Cum spui "Salut" în franceză?',
     image: '👋',
     options: ['Bonjour', 'Au revoir', 'Merci', 'Oui'],
     correct: 0,
@@ -13,18 +13,18 @@ export const module1Exercises: Exercise[] = [
   {
     id: 2,
     type: 'match',
-    question: 'Найди правильную пару!',
+    question: 'Găsește perechea corectă!',
     pairs: [
-      { french: 'Bonjour', russian: 'Привет', emoji: '👋' },
-      { french: 'Merci', russian: 'Спасибо', emoji: '🙏' },
-      { french: 'Oui', russian: 'Да', emoji: '✅' },
-      { french: 'Non', russian: 'Нет', emoji: '❌' }
+      { french: 'Bonjour', russian: 'Salut', emoji: '👋' },
+      { french: 'Merci', russian: 'Mulțumesc', emoji: '🙏' },
+      { french: 'Oui', russian: 'Da', emoji: '✅' },
+      { french: 'Non', russian: 'Nu', emoji: '❌' }
     ]
   },
   {
     id: 3,
     type: 'choice',
-    question: 'Что означает "Au revoir"?',
+    question: 'Ce înseamnă "Au revoir"?',
     image: '👋',
     options: ['До свидания', 'Привет', 'Спасибо', 'Пожалуйста'],
     correct: 0,
@@ -33,7 +33,7 @@ export const module1Exercises: Exercise[] = [
   {
     id: 4,
     type: 'choice',
-    question: 'Как сказать "Спасибо"?',
+    question: 'Cum spui "Mulțumesc"?',
     image: '🙏',
     options: ['Oui', 'Merci', 'Non', 'Salut'],
     correct: 1,
@@ -42,7 +42,7 @@ export const module1Exercises: Exercise[] = [
   {
     id: 5,
     type: 'letters',
-    question: 'Составь слово "MERCI"',
+    question: 'Compune cuvântul "MERCI"',
     word: 'MERCI',
     letters: ['M', 'E', 'R', 'C', 'I', 'A', 'B', 'S']
   }

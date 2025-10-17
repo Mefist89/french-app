@@ -61,7 +61,7 @@ const ExerciseLetters = ({ exercise, onComplete, onNext }: ExerciseLettersProps)
 
       <div className="mb-8 bg-purple-100 p-6 rounded-2xl min-h-[100px] flex items-center justify-center gap-2">
         {selectedLetters.length === 0 ? (
-          <span className="text-gray-400 text-2xl">Нажми на буквы...</span>
+          <span className="text-gray-400 text-2xl">Apasă pe litere...</span>
         ) : (
           selectedLetters.map((item, index) => (
             <div
@@ -80,7 +80,7 @@ const ExerciseLetters = ({ exercise, onComplete, onNext }: ExerciseLettersProps)
             onClick={removeLastLetter}
             className="bg-red-400 text-white px-6 py-3 rounded-xl hover:bg-red-500 transition"
           >
-            Удалить последнюю букву
+            Șterge ultima literă
           </button>
         </div>
       )}
@@ -111,26 +111,26 @@ const ExerciseLetters = ({ exercise, onComplete, onNext }: ExerciseLettersProps)
             <>
               <div className="flex items-center justify-center gap-3 text-green-600 text-2xl font-bold mb-6">
                 <CheckCircle className="w-12 h-12" />
-                <span>Правильно! Молодец! 🎉</span>
+                <span>Corect! Bravo! 🎉</span>
               </div>
               <button
                 onClick={handleNext}
                 className="bg-gradient-to-r from-green-500 to-blue-500 text-white px-8 py-4 rounded-2xl text-xl font-bold flex items-center gap-2 mx-auto hover:scale-105 transform transition"
               >
-                Дальше <ArrowRight className="w-6 h-6" />
+                Mai departe <ArrowRight className="w-6 h-6" />
               </button>
             </>
           ) : (
             <>
               <div className="flex items-center justify-center gap-3 text-red-600 text-2xl font-bold mb-6">
                 <XCircle className="w-12 h-12" />
-                <span>Попробуй ещё раз!</span>
+                <span>Încearcă din nou!</span>
               </div>
               <button
                 onClick={handleRetry}
                 className="bg-gradient-to-r from-orange-500 to-red-500 text-white px-8 py-4 rounded-2xl text-xl font-bold mx-auto hover:scale-105 transform transition"
               >
-                Попробовать снова
+                Încearcă din nou
               </button>
             </>
           )}

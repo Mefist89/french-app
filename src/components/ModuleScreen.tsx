@@ -14,20 +14,20 @@ interface ModuleScreenProps {
 }
 
 const moduleNames: Record<number, string> = {
-  1: 'Приветствия',
-  2: 'Алфавит',
-  3: 'Цифры 1-10',
-  4: 'Цвета',
-  5: 'Животные',
-  6: 'Семья',
-  7: 'Еда',
-  8: 'Школа',
-  9: 'Одежда',
-  10: 'Погода',
-  11: 'Транспорт',
-  12: 'Дом',
-  13: 'Произношение',
-  14: 'Грамматика'
+  1: 'Salutări',
+  2: 'Alfabet',
+  3: 'Numere 1-10',
+  4: 'Culori',
+  5: 'Animale',
+  6: 'Familie',
+  7: 'Mâncare',
+  8: 'Școală',
+  9: 'Haine',
+  10: 'Vremea',
+  11: 'Transport',
+  12: 'Casă',
+  13: 'Pronunție',
+  14: 'Gramatică'
 };
 
 const ModuleScreen = ({ moduleId, onBack, onComplete }: ModuleScreenProps) => {
@@ -35,7 +35,7 @@ const ModuleScreen = ({ moduleId, onBack, onComplete }: ModuleScreenProps) => {
   const [currentExercise, setCurrentExercise] = useState(0);
   const [score, setScore] = useState(0);
   const [completedExercises, setCompletedExercises] = useState<number[]>([]);
-  const [resetKey, setResetKey] = useState(0); // Добавили ключ для сброса
+  const [resetKey, setResetKey] = useState(0); // Added reset key
 
   const currentEx = exercises[currentExercise];
   const moduleName = moduleNames[moduleId] || `Модуль ${moduleId}`;
@@ -50,7 +50,7 @@ const ModuleScreen = ({ moduleId, onBack, onComplete }: ModuleScreenProps) => {
   const handleNext = () => {
     if (currentExercise < exercises.length - 1) {
       setCurrentExercise(currentExercise + 1);
-      setResetKey(resetKey + 1); // Увеличиваем ключ при переходе к следующему упражнению
+      setResetKey(resetKey + 1); // Incrementing key when moving to next exercise
     } else {
       onComplete(score, exercises.length);
     }
@@ -61,13 +61,13 @@ const ModuleScreen = ({ moduleId, onBack, onComplete }: ModuleScreenProps) => {
       <div className="min-h-screen bg-gradient-to-br from-blue-400 via-purple-300 to-pink-300 p-6 flex items-center justify-center">
         <div className="bg-white rounded-3xl shadow-2xl p-8 text-center">
           <p className="text-2xl text-gray-700 mb-4">
-            Упражнения для этого модуля пока не добавлены
+            Exercițiile pentru acest modul nu au fost adăugate încă
           </p>
           <button
             onClick={onBack}
             className="bg-gradient-to-r from-blue-500 to-purple-500 text-white px-8 py-4 rounded-2xl text-xl font-bold hover:scale-105 transform transition"
           >
-            Вернуться в меню
+            Reveniți la meniu
           </button>
         </div>
       </div>
@@ -88,8 +88,8 @@ const ModuleScreen = ({ moduleId, onBack, onComplete }: ModuleScreenProps) => {
             </button>
             <div className="flex-1 text-center">
               <h1 className="text-3xl font-bold text-purple-600">{moduleName}</h1>
-              <p className="text-gray-600">
-                Упражнение {currentExercise + 1} из {exercises.length}
+              <p className="text-gray-60">
+                Exercițiu {currentExercise + 1} din {exercises.length}
               </p>
             </div>
             <div className="flex gap-2">
@@ -117,7 +117,7 @@ const ModuleScreen = ({ moduleId, onBack, onComplete }: ModuleScreenProps) => {
         <div className="bg-white rounded-3xl shadow-2xl p-8">
           {currentEx.type === 'choice' && (
             <ExerciseChoice
-              key={resetKey} // Добавили key для сброса состояния
+              key={resetKey} // Added key to reset state
               exercise={currentEx}
               onComplete={handleExerciseComplete}
               onNext={handleNext}
@@ -126,7 +126,7 @@ const ModuleScreen = ({ moduleId, onBack, onComplete }: ModuleScreenProps) => {
 
           {currentEx.type === 'match' && (
             <ExerciseMatch
-              key={resetKey} // Добавили key для сброса состояния
+              key={resetKey} // Added key to reset state
               exercise={currentEx}
               onComplete={handleExerciseComplete}
               onNext={handleNext}
@@ -135,7 +135,7 @@ const ModuleScreen = ({ moduleId, onBack, onComplete }: ModuleScreenProps) => {
 
           {currentEx.type === 'letters' && (
             <ExerciseLetters
-              key={resetKey} // Добавили key для сброса состояния
+              key={resetKey} // Added key to reset state
               exercise={currentEx}
               onComplete={handleExerciseComplete}
               onNext={handleNext}
@@ -144,7 +144,7 @@ const ModuleScreen = ({ moduleId, onBack, onComplete }: ModuleScreenProps) => {
 
           {currentEx.type === 'pronunciation' && (
             <ExercisePronunciation
-              key={resetKey} // Добавили key для сброса состояния
+              key={resetKey} // Added key to reset state
               exercise={currentEx}
               onComplete={handleExerciseComplete}
               onNext={handleNext}
@@ -153,7 +153,7 @@ const ModuleScreen = ({ moduleId, onBack, onComplete }: ModuleScreenProps) => {
 
           {currentEx.type === 'grammar' && (
             <ExerciseGrammar
-              key={resetKey} // Добавили key для сброса состояния
+              key={resetKey} // Added key to reset state
               exercise={currentEx}
               onComplete={handleExerciseComplete}
               onNext={handleNext}

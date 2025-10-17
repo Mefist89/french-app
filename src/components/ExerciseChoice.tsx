@@ -28,19 +28,19 @@ const ExerciseChoice = ({ exercise, onComplete, onNext }: ExerciseChoiceProps) =
     
     setIsPlaying(true);
     
-    // Для модуля алфавита (если есть display формата "A - Avion")
+    // For alphabet module (if display format is "A - Avion")
     if (exercise.display.includes(' - ')) {
       const [letter, word] = exercise.display.split(' - ');
       
-      // 1. Произносим букву
+      // 1. Pronounce the letter
       await playAudio(letter);
       await new Promise(resolve => setTimeout(resolve, 500)); // пауза 0.5 сек
       
-      // 2. Произносим слово
+      // 2. Pronounce the word
       await playAudio(word);
       await new Promise(resolve => setTimeout(resolve, 500)); // пауза 0.5 сек
       
-      // 3. Снова произносим букву для закрепления
+      // 3. Pronounce the letter again for reinforcement
       await playAudio(letter);
     } else {
       // Обычное произношение для других упражнений
@@ -96,7 +96,7 @@ const ExerciseChoice = ({ exercise, onComplete, onNext }: ExerciseChoiceProps) =
             }`}
           >
             <Volume2 className="w-6 h-6" />
-            {isPlaying ? 'Проигрывается...' : 'Послушать ещё раз'}
+            {isPlaying ? 'Se redă...' : 'Ascultă din nou'}
           </button>
         )}
       </div>
@@ -127,19 +127,19 @@ const ExerciseChoice = ({ exercise, onComplete, onNext }: ExerciseChoiceProps) =
           {selectedAnswer === exercise.correct ? (
             <div className="flex items-center justify-center gap-3 text-green-600 text-2xl font-bold">
               <CheckCircle className="w-12 h-12" />
-              <span>Правильно! Молодец! 🎉</span>
+              <span>Corect! Bravo! 🎉</span>
             </div>
           ) : (
             <div className="flex items-center justify-center gap-3 text-red-600 text-2xl font-bold">
               <XCircle className="w-12 h-12" />
-              <span>Попробуй ещё раз!</span>
+              <span>Încearcă din nou!</span>
             </div>
           )}
           <button
             onClick={handleNext}
             className="mt-6 bg-gradient-to-r from-green-500 to-blue-500 text-white px-8 py-4 rounded-2xl text-xl font-bold flex items-center gap-2 mx-auto hover:scale-105 transform transition"
           >
-            Дальше <ArrowRight className="w-6 h-6" />
+            Mai departe <ArrowRight className="w-6 h-6" />
           </button>
         </div>
       )}

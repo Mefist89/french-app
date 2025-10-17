@@ -52,7 +52,7 @@ const ExerciseMatch = ({ exercise, onComplete, onNext }: ExerciseMatchProps) => 
       <div className="grid grid-cols-2 gap-8">
         <div className="space-y-4">
           <h3 className="text-xl font-bold text-purple-600 text-center">
-            Французский
+            Franceză
           </h3>
           {exercise.pairs.map((pair, index) => (
             <button
@@ -73,7 +73,7 @@ const ExerciseMatch = ({ exercise, onComplete, onNext }: ExerciseMatchProps) => 
         </div>
         <div className="space-y-4">
           <h3 className="text-xl font-bold text-pink-600 text-center">
-            Русский
+            Română
           </h3>
           {exercise.pairs.map((pair, index) => (
             <button
@@ -95,13 +95,13 @@ const ExerciseMatch = ({ exercise, onComplete, onNext }: ExerciseMatchProps) => 
         <div className="mt-8 text-center">
           <div className="flex items-center justify-center gap-3 text-green-600 text-2xl font-bold mb-6">
             <CheckCircle className="w-12 h-12" />
-            <span>Отлично! Все пары верны! 🎉</span>
+            <span>Excelent! Toate perechile sunt corecte! 🎉</span>
           </div>
           <button
             onClick={handleNext}
             className="bg-gradient-to-r from-green-500 to-blue-500 text-white px-8 py-4 rounded-2xl text-xl font-bold flex items-center gap-2 mx-auto hover:scale-105 transform transition"
           >
-            Дальше <ArrowRight className="w-6 h-6" />
+            Mai departe <ArrowRight className="w-6 h-6" />
           </button>
         </div>
       )}

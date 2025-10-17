@@ -4,41 +4,41 @@ export const module14Exercises: Exercise[] = [
   {
     id: 1,
     type: 'grammar',
-    question: 'Напиши "Привет" по-французски',
+    question: 'Scrie "Salut" în franceză',
     correctAnswer: 'Bonjour',
-    hint: 'Начинается с B...',
+    hint: 'Începe cu B...',
     image: '👋'
   },
   {
     id: 2,
     type: 'grammar',
-    question: 'Напиши "Спасибо"',
+    question: 'Scrie "Mulțumesc"',
     correctAnswer: 'Merci',
-    hint: 'Начинается с M...',
+    hint: 'Începe cu M...',
     image: '🙏'
   },
   {
     id: 3,
     type: 'grammar',
-    question: 'Напиши "До свидания"',
+    question: 'Scrie "La revedere"',
     correctAnswer: 'Au revoir',
-    hint: 'Два слова: Au...',
+    hint: 'Două cuvinte: Au...',
     image: '👋'
   },
   {
     id: 4,
     type: 'grammar',
-    question: 'Напиши "Да"',
+    question: 'Scrie "Da"',
     correctAnswer: 'Oui',
-    hint: 'Три буквы...',
+    hint: 'Trei litere...',
     image: '✅'
   },
   {
     id: 5,
     type: 'grammar',
-    question: 'Напиши "Нет"',
+    question: 'Scrie "Nu"',
     correctAnswer: 'Non',
-    hint: 'Три буквы...',
+    hint: 'Trei litere...',
     image: '❌'
   }
 ];

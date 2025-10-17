@@ -7,20 +7,20 @@ interface MainMenuProps {
 }
 
 const modules: Module[] = [
-  { id: 1, title: 'Приветствия', emoji: '👋', color: 'from-blue-400 to-purple-400', unlocked: true },
-  { id: 2, title: 'Алфавит', emoji: '🔤', color: 'from-green-400 to-teal-400', unlocked: true },
-  { id: 3, title: 'Цифры 1-10', emoji: '🔢', color: 'from-pink-400 to-red-400', unlocked: true },
-  { id: 4, title: 'Цвета', emoji: '🎨', color: 'from-yellow-400 to-orange-400', unlocked: true },
-  { id: 5, title: 'Животные', emoji: '🐱', color: 'from-purple-400 to-pink-400', unlocked: true },
-  { id: 6, title: 'Семья', emoji: '👨‍👩‍👧', color: 'from-red-400 to-orange-400', unlocked: true },
-  { id: 7, title: 'Еда', emoji: '🍎', color: 'from-indigo-400 to-blue-400', unlocked: true },
-  { id: 8, title: 'Школа', emoji: '📚', color: 'from-cyan-400 to-blue-400', unlocked: true },
-  { id: 9, title: 'Одежда', emoji: '👕', color: 'from-yellow-400 to-amber-400', unlocked: true },
-  { id: 10, title: 'Погода', emoji: '☀️', color: 'from-gray-400 to-slate-400', unlocked: true },
-  { id: 11, title: 'Транспорт', emoji: '🚗', color: 'from-emerald-400 to-green-400', unlocked: true },
-  { id: 12, title: 'Дом', emoji: '🏠', color: 'from-orange-400 to-red-400', unlocked: true },
-  { id: 13, title: 'Произношение', emoji: '🎤', color: 'from-rose-400 to-pink-400', unlocked: true },
-  { id: 14, title: 'Грамматика', emoji: '✍️', color: 'from-violet-400 to-purple-400', unlocked: true }
+  { id: 1, title: 'Salutări', emoji: '👋', color: 'from-blue-400 to-purple-400', unlocked: true },
+  { id: 2, title: 'Alfabet', emoji: '🔤', color: 'from-green-400 to-teal-400', unlocked: true },
+  { id: 3, title: 'Numere 1-10', emoji: '🔢', color: 'from-pink-400 to-red-400', unlocked: true },
+  { id: 4, title: 'Culori', emoji: '🎨', color: 'from-yellow-400 to-orange-400', unlocked: true },
+  { id: 5, title: 'Animale', emoji: '🐱', color: 'from-purple-400 to-pink-400', unlocked: true },
+  { id: 6, title: 'Familie', emoji: '👨‍👩‍👧', color: 'from-red-400 to-orange-400', unlocked: true },
+  { id: 7, title: 'Mâncare', emoji: '🍎', color: 'from-indigo-400 to-blue-400', unlocked: true },
+  { id: 8, title: 'Școală', emoji: '📚', color: 'from-cyan-400 to-blue-400', unlocked: true },
+  { id: 9, title: 'Haine', emoji: '👕', color: 'from-yellow-400 to-amber-400', unlocked: true },
+  { id: 10, title: 'Vremea', emoji: '☀️', color: 'from-gray-400 to-slate-400', unlocked: true },
+  { id: 11, title: 'Transport', emoji: '🚗', color: 'from-emerald-400 to-green-400', unlocked: true },
+  { id: 12, title: 'Casă', emoji: '🏠', color: 'from-orange-400 to-red-400', unlocked: true },
+  { id: 13, title: 'Pronunție', emoji: '🎤', color: 'from-rose-400 to-pink-400', unlocked: true },
+  { id: 14, title: 'Gramatică', emoji: '✍️', color: 'from-violet-400 to-purple-400', unlocked: true }
 ];
 
 const MainMenu = ({ moduleProgress, onModuleSelect }: MainMenuProps) => {
@@ -41,9 +41,9 @@ const MainMenu = ({ moduleProgress, onModuleSelect }: MainMenuProps) => {
         {/* Header */}
         <div className="text-center mb-12">
           <h1 className="text-6xl font-bold text-white mb-4 drop-shadow-lg">
-            🇫🇷 Французский язык
+            🇫🇷 Limba Franceză
           </h1>
-          <p className="text-2xl text-white/90">Для первого класса</p>
+          <p className="text-2xl text-white/90">Pentru clasa întâi</p>
         </div>
 
         {/* Modules Grid - 3 per row */}
@@ -120,15 +120,15 @@ const MainMenu = ({ moduleProgress, onModuleSelect }: MainMenuProps) => {
         <div className="bg-white/20 backdrop-blur-lg rounded-3xl p-6 text-center">
           <div className="grid grid-cols-3 gap-4">
             <div>
-              <p className="text-white/80 text-sm mb-1">Всего модулей</p>
+              <p className="text-white/80 text-sm mb-1">Total module</p>
               <p className="text-4xl font-bold text-white">{totalModules}</p>
             </div>
             <div>
-              <p className="text-white/80 text-sm mb-1">Пройдено</p>
+              <p className="text-white/80 text-sm mb-1">Finalizate</p>
               <p className="text-4xl font-bold text-white">{completedModules}</p>
             </div>
             <div>
-              <p className="text-white/80 text-sm mb-1">Всего звёзд</p>
+              <p className="text-white/80 text-sm mb-1">Total stele</p>
               <p className="text-4xl font-bold text-white">
                 {totalStars}/{maxStars}
               </p>

@@ -11,7 +11,7 @@ function App() {
   const [selectedModule, setSelectedModule] = useState<number | null>(null);
   const [moduleScore, setModuleScore] = useState<number>(0);
   const [totalExercises, setTotalExercises] = useState<number>(5);
-  const [moduleKey, setModuleKey] = useState(0); // Добавили ключ для сброса модуля
+  const [moduleKey, setModuleKey] = useState(0); // Added key to reset module
   
   const [moduleProgress, setModuleProgress] = useState<ModuleProgress>({
     1: 5, 2: 3, 3: 0, 4: 0, 5: 0, 6: 0, 7: 0, 
@@ -21,7 +21,7 @@ function App() {
   const handleModuleSelect = (moduleId: number) => {
     setSelectedModule(moduleId);
     setCurrentScreen('module');
-    setModuleKey(moduleKey + 1); // Увеличиваем ключ при выборе модуля
+    setModuleKey(moduleKey + 1); // Incrementing key when module is selected
   };
 
   const handleBackToMenu = () => {
@@ -34,7 +34,7 @@ function App() {
     setTotalExercises(total);
     setCurrentScreen('completion');
     
-    // Обновляем прогресс модуля
+    // Update module progress
     if (selectedModule) {
       setModuleProgress(prev => ({
         ...prev,
@@ -45,7 +45,7 @@ function App() {
 
   const handleRetryModule = () => {
     setCurrentScreen('module');
-    setModuleKey(moduleKey + 1); // Увеличиваем ключ для полного сброса
+    setModuleKey(moduleKey + 1); // Increment key for full reset
   };
 
   return (
@@ -59,7 +59,7 @@ function App() {
 
       {currentScreen === 'module' && selectedModule && (
         <ModuleScreen
-          key={moduleKey} // Добавили key для полного сброса модуля
+          key={moduleKey} // Added key for full module reset
           moduleId={selectedModule}
           onBack={handleBackToMenu}
           onComplete={handleModuleComplete}

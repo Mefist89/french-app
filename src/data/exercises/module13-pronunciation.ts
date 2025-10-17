@@ -4,7 +4,7 @@ export const module13Exercises: Exercise[] = [
   {
     id: 1,
     type: 'pronunciation',
-    question: 'Произнеси слово "Bonjour"',
+    question: 'Pronunță cuvântul "Bonjour"',
     targetWord: 'Bonjour',
     image: '👋',
     hint: 'Бонжур'
@@ -12,7 +12,7 @@ export const module13Exercises: Exercise[] = [
   {
     id: 2,
     type: 'pronunciation',
-    question: 'Произнеси слово "Merci"',
+    question: 'Pronunță cuvântul "Merci"',
     targetWord: 'Merci',
     image: '🙏',
     hint: 'Мерси'
@@ -20,7 +20,7 @@ export const module13Exercises: Exercise[] = [
   {
     id: 3,
     type: 'pronunciation',
-    question: 'Произнеси "Je m\'appelle"',
+    question: 'Pronunță "Je m\'appelle"',
     targetWord: 'Je m\'appelle',
     image: '👤',
     hint: 'Же мапель'
@@ -28,7 +28,7 @@ export const module13Exercises: Exercise[] = [
   {
     id: 4,
     type: 'pronunciation',
-    question: 'Произнеси "Au revoir"',
+    question: 'Pronunță "Au revoir"',
     targetWord: 'Au revoir',
     image: '👋',
     hint: 'О ревуар'
@@ -36,7 +36,7 @@ export const module13Exercises: Exercise[] = [
   {
     id: 5,
     type: 'pronunciation',
-    question: 'Произнеси "S\'il vous plaît"',
+    question: 'Pronunță "S\'il vous plaît"',
     targetWord: 'S\'il vous plaît',
     image: '🙏',
     hint: 'Силь ву пле'

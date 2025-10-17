@@ -4,7 +4,7 @@ export const module5Exercises: Exercise[] = [
   {
     id: 1,
     type: 'choice',
-    question: 'Как сказать "Собака" по-французски?',
+    question: 'Cum spui "Câine" în franceză?',
     image: '🐕',
     display: 'Le chien',
     options: ['Le chien', 'Le chat', 'L\'oiseau', 'Le lapin'],
@@ -14,7 +14,7 @@ export const module5Exercises: Exercise[] = [
   {
     id: 2,
     type: 'choice',
-    question: 'Как сказать "Кошка" по-французски?',
+    question: 'Cum spui "Pisică" în franceză?',
     image: '🐈',
     display: 'Le chat',
     options: ['Le hamster', 'Le chat', 'L\'oiseau', 'Le chien'],
@@ -24,7 +24,7 @@ export const module5Exercises: Exercise[] = [
  {
     id: 3,
     type: 'choice',
-    question: 'Как сказать "Птица" по-французски?',
+    question: 'Cum spui "Pasăre" în franceză?',
     image: '🐦',
     display: 'L\'oiseau',
     options: ['Le lapin', 'Le perroquet', 'L\'oiseau', 'Le chat'],
@@ -34,7 +34,7 @@ export const module5Exercises: Exercise[] = [
   {
     id: 4,
     type: 'choice',
-    question: 'Как сказать "Хомяк" по-французски?',
+    question: 'Cum spui "Hamster" în franceză?',
     image: '🐹',
     display: 'Le hamster',
     options: ['Le hamster', 'Le lapin', 'Le chien', 'L\'ours'],
@@ -44,7 +44,7 @@ export const module5Exercises: Exercise[] = [
   {
     id: 5,
     type: 'choice',
-    question: 'Как сказать "Попугай" по-французски?',
+    question: 'Cum spui "Papagă" în franceză?',
     image: '🦜',
     display: 'Le perroquet',
     options: ['L\'oiseau', 'Le perroquet', 'Le chat', 'Le chien'],
@@ -54,7 +54,7 @@ export const module5Exercises: Exercise[] = [
   {
     id: 6,
     type: 'choice',
-    question: 'Как сказать "Кролик" по-французски?',
+    question: 'Cum spui "Iepure" în franceză?',
     image: '🐰',
     display: 'Le lapin',
     options: ['Le hamster', 'L\'ours', 'Le lapin', 'Le chien'],
@@ -64,7 +64,7 @@ export const module5Exercises: Exercise[] = [
   {
     id: 7,
     type: 'choice',
-    question: 'Как сказать "Медведь" по-французски?',
+    question: 'Cum spui "Urs" în franceză?',
     image: '🐻',
     display: 'L\'ours',
     options: ['Le chien', 'L\'ours', 'Le chat', 'Le lapin'],
@@ -74,7 +74,7 @@ export const module5Exercises: Exercise[] = [
   {
     id: 8,
     type: 'choice',
-    question: 'Как сказать "Лошадь" по-французски?',
+    question: 'Cum spui "Cal" în franceză?',
     image: '🐴',
     display: 'Le cheval',
     options: ['Le cheval', 'Le chat', 'Le chien', 'L\'ours'],
@@ -84,7 +84,7 @@ export const module5Exercises: Exercise[] = [
   {
     id: 9,
     type: 'choice',
-    question: 'Как сказать "Корова" по-французски?',
+    question: 'Cum spui "Vacă" în franceză?',
     image: '🐄',
     display: 'La vache',
     options: ['Le lapin', 'La vache', 'Le chien', 'Le chat'],
@@ -94,7 +94,7 @@ export const module5Exercises: Exercise[] = [
   {
     id: 10,
     type: 'choice',
-    question: 'Как сказать "Свинья" по-французски?',
+    question: 'Cum spui "Porc" în franceză?',
     image: '🐷',
     display: 'Le cochon',
     options: ['Le cochon', 'Le hamster', 'L\'oiseau', 'Le lapin'],

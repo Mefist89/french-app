@@ -59,7 +59,7 @@ const ExerciseGrammar = ({ exercise, onComplete, onNext }: ExerciseGrammarProps)
       newFeedback = {
         correct: true,
         score: 100,
-        message: 'Абсолютно правильно! Отличная работа! 🌟',
+        message: 'Total corect! Foarte bine! 🌟',
         errors: []
       };
       onComplete(true);
@@ -67,16 +67,16 @@ const ExerciseGrammar = ({ exercise, onComplete, onNext }: ExerciseGrammarProps)
       newFeedback = {
         correct: false,
         score: 70,
-        message: 'Почти правильно! Проверь написание. 📝',
-        errors: ['Небольшая ошибка в написании']
+        message: 'Aproape corect! Verifică ortografia. 📝',
+        errors: ['Mică eroare de ortografie']
       };
       onComplete(false);
     } else {
       newFeedback = {
         correct: false,
         score: 30,
-        message: 'Попробуй ещё раз. Правильный ответ: ' + correctAnswer,
-        errors: ['Неправильное написание']
+        message: 'Încearcă din nou. Răspunsul corect este: ' + correctAnswer,
+        errors: ['Scriere incorectă']
       };
       onComplete(false);
     }
@@ -114,7 +114,7 @@ const ExerciseGrammar = ({ exercise, onComplete, onNext }: ExerciseGrammarProps)
             value={input}
             onChange={(e) => setInput(e.target.value)}
             onKeyPress={handleKeyPress}
-            placeholder="Напиши ответ здесь..."
+            placeholder="Scrie răspunsul aici..."
             className="w-full p-6 text-2xl border-4 border-purple-300 rounded-2xl mb-6 focus:outline-none focus:border-purple-500"
             autoFocus
           />
@@ -128,7 +128,7 @@ const ExerciseGrammar = ({ exercise, onComplete, onNext }: ExerciseGrammarProps)
             }`}
           >
             <MessageSquare className="w-8 h-8 inline-block mr-3" />
-            Проверить ответ
+            Verifică răspunsul
           </button>
         </div>
       )}
@@ -151,11 +151,11 @@ const ExerciseGrammar = ({ exercise, onComplete, onNext }: ExerciseGrammarProps)
               {feedback.message}
             </p>
             <div className="bg-white p-4 rounded-xl mb-4">
-              <p className="text-gray-600 mb-2">Твой ответ:</p>
+              <p className="text-gray-600 mb-2">Răspunsul tău:</p>
               <p className="text-xl font-bold text-gray-800">{input}</p>
               {!feedback.correct && (
                 <>
-                  <p className="text-gray-600 mt-4 mb-2">Правильный ответ:</p>
+                  <p className="text-gray-600 mt-4 mb-2">Răspunsul corect:</p>
                   <p className="text-xl font-bold text-green-600">
                     {exercise.correctAnswer}
                   </p>
@@ -165,13 +165,13 @@ const ExerciseGrammar = ({ exercise, onComplete, onNext }: ExerciseGrammarProps)
             <div className="text-4xl font-bold text-purple-600 mb-2">
               {feedback.score}%
             </div>
-            <p className="text-gray-600">Оценка AI</p>
+            <p className="text-gray-600">Evaluare AI</p>
           </div>
           <button
             onClick={handleNext}
             className="bg-gradient-to-r from-green-500 to-blue-500 text-white px-8 py-4 rounded-2xl text-xl font-bold flex items-center gap-2 mx-auto hover:scale-105 transform transition"
           >
-            Дальше <ArrowRight className="w-6 h-6" />
+            Mai departe <ArrowRight className="w-6 h-6" />
           </button>
         </div>
       )}

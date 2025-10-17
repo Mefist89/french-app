@@ -4,7 +4,7 @@ export const module2Exercises: Exercise[] = [
   {
     id: 1,
     type: 'choice',
-    question: 'Послушай букву A и слово Avion (самолёт)',
+    question: 'Ascultă litera A și cuvântul Avion (avion)',
     image: '✈️',
     display: 'A - Avion',
     options: ['A (а)', 'E (э)', 'I (и)', 'O (о)'],
@@ -14,7 +14,7 @@ export const module2Exercises: Exercise[] = [
   {
     id: 2,
     type: 'choice',
-    question: 'Послушай букву B и слово Banane (банан)',
+    question: 'Ascultă litera B și cuvântul Banane (banană)',
     image: '🍌',
     display: 'B - Banane',
     options: ['B (бэ)', 'D (дэ)', 'P (пэ)', 'V (вэ)'],
@@ -24,7 +24,7 @@ export const module2Exercises: Exercise[] = [
   {
     id: 3,
     type: 'choice',
-    question: 'Послушай букву C и слово Cerf (олень)',
+    question: 'Ascultă litera C și cuvântul Cerf (cerv)',
     image: '🦌',
     display: 'C - Cerf',
     options: ['C (сэ)', 'S (эс)', 'K (ка)', 'G (жэ)'],
@@ -34,7 +34,7 @@ export const module2Exercises: Exercise[] = [
   {
     id: 4,
     type: 'choice',
-    question: 'Послушай букву D и слово Dragon (дракон)',
+    question: 'Ascultă litera D și cuvântul Dragon (dragon)',
     image: '🐉',
     display: 'D - Dragon',
     options: ['B (бэ)', 'D (дэ)', 'T (тэ)', 'P (пэ)'],
@@ -44,7 +44,7 @@ export const module2Exercises: Exercise[] = [
   {
     id: 5,
     type: 'choice',
-    question: 'Послушай букву E и слово Éléphant (слон)',
+    question: 'Ascultă litera E și cuvântul Éléphant (elefant)',
     image: '🐘',
     display: 'E - Éléphant',
     options: ['A (а)', 'E (э)', 'I (и)', 'U (ю)'],
@@ -54,7 +54,7 @@ export const module2Exercises: Exercise[] = [
   {
     id: 6,
     type: 'choice',
-    question: 'Послушай букву F и слово Fleur (цветок)',
+    question: 'Ascultă litera F și cuvântul Fleur (floare)',
     image: '🌸',
     display: 'F - Fleur',
     options: ['F (эф)', 'V (вэ)', 'P (пэ)', 'H (аш)'],
@@ -64,7 +64,7 @@ export const module2Exercises: Exercise[] = [
   {
     id: 7,
     type: 'choice',
-    question: 'Послушай букву G и слово Girafe (жираф)',
+    question: 'Ascultă litera G și cuvântul Girafe (girafă)',
     image: '🦒',
     display: 'G - Girafe',
     options: ['J (жи)', 'G (жэ)', 'C (сэ)', 'K (ка)'],
@@ -74,7 +74,7 @@ export const module2Exercises: Exercise[] = [
   {
     id: 8,
     type: 'choice',
-    question: 'Послушай букву H и слово Hamster (хомяк)',
+    question: 'Ascultă litera H și cuvântul Hamster (hamstere)',
     image: '🐹',
     display: 'H - Hamster',
     options: ['H (аш)', 'A (а)', 'K (ка)', 'O (о)'],
@@ -84,7 +84,7 @@ export const module2Exercises: Exercise[] = [
   {
     id: 9,
     type: 'choice',
-    question: 'Послушай букву I и слово Igloo (иглу)',
+    question: 'Ascultă litera I și cuvântul Igloo (iglu)',
     image: '🏠',
     display: 'I - Igloo',
     options: ['E (э)', 'I (и)', 'Y (игрек)', 'J (жи)'],
@@ -94,7 +94,7 @@ export const module2Exercises: Exercise[] = [
   {
     id: 10,
     type: 'choice',
-    question: 'Послушай букву J и слово Jouet (игрушка)',
+    question: 'Ascultă litera J și cuvântul Jouet (jucărie)',
     image: '🧸',
     display: 'J - Jouet',
     options: ['J (жи)', 'G (жэ)', 'I (и)', 'Y (игрек)'],
@@ -104,7 +104,7 @@ export const module2Exercises: Exercise[] = [
   {
     id: 11,
     type: 'choice',
-    question: 'Послушай букву K и слово Kangourou (кенгуру)',
+    question: 'Ascultă litera K și cuvântul Kangourou (cangur)',
     image: '🦘',
     display: 'K - Kangourou',
     options: ['C (сэ)', 'K (ка)', 'Q (кю)', 'G (жэ)'],
@@ -114,7 +114,7 @@ export const module2Exercises: Exercise[] = [
   {
     id: 12,
     type: 'choice',
-    question: 'Послушай букву L и слово Lampe (лампа)',
+    question: 'Ascultă litera L și cuvântul Lampe (lampă)',
     image: '💡',
     display: 'L - Lampe',
     options: ['L (эль)', 'I (и)', 'R (эр)', 'T (тэ)'],
@@ -124,7 +124,7 @@ export const module2Exercises: Exercise[] = [
   {
     id: 13,
     type: 'choice',
-    question: 'Послушай букву M и слово Maison (дом)',
+    question: 'Ascultă litera M și cuvântul Maison (casă)',
     image: '🏡',
     display: 'M - Maison',
     options: ['N (эн)', 'M (эм)', 'W (дубль вэ)', 'H (аш)'],
@@ -134,7 +134,7 @@ export const module2Exercises: Exercise[] = [
   {
     id: 14,
     type: 'choice',
-    question: 'Послушай букву N и слово Nuage (облако)',
+    question: 'Ascultă litera N și cuvântul Nuage (nor)',
     image: '☁️',
     display: 'N - Nuage',
     options: ['M (эм)', 'N (эн)', 'U (ю)', 'H (аш)'],
@@ -144,7 +144,7 @@ export const module2Exercises: Exercise[] = [
   {
     id: 15,
     type: 'choice',
-    question: 'Послушай букву O и слово Oiseau (птица)',
+    question: 'Ascultă litera O și cuvântul Oiseau (pasăre)',
     image: '🐦',
     display: 'O - Oiseau',
     options: ['A (а)', 'U (ю)', 'O (о)', 'E (э)'],
@@ -154,7 +154,7 @@ export const module2Exercises: Exercise[] = [
   {
     id: 16,
     type: 'choice',
-    question: 'Послушай букву P и слово Perruche (попугай)',
+    question: 'Ascultă litera P și cuvântul Perruche (papagă)',
     image: '🦜',
     display: 'P - Perruche',
     options: ['P (пэ)', 'B (бэ)', 'R (эр)', 'F (эф)'],
@@ -164,7 +164,7 @@ export const module2Exercises: Exercise[] = [
   {
     id: 17,
     type: 'choice',
-    question: 'Послушай букву Q и слово Question (вопрос)',
+    question: 'Ascultă litera Q și cuvântul Question (întrebare)',
     image: '❓',
     display: 'Q - Question',
     options: ['K (ка)', 'Q (кю)', 'C (сэ)', 'G (жэ)'],
@@ -174,7 +174,7 @@ export const module2Exercises: Exercise[] = [
   {
     id: 18,
     type: 'choice',
-    question: 'Послушай букву R и слово Règle (линейка)',
+    question: 'Ascultă litera R și cuvântul Règle (riglă)',
     image: '📏',
     display: 'R - Règle',
     options: ['R (эр)', 'L (эль)', 'P (пэ)', 'T (тэ)'],
@@ -184,7 +184,7 @@ export const module2Exercises: Exercise[] = [
   {
     id: 19,
     type: 'choice',
-    question: 'Послушай букву S и слово Stylo (ручка)',
+    question: 'Ascultă litera S și cuvântul Stylo (stilou)',
     image: '🖊️',
     display: 'S - Stylo',
     options: ['C (сэ)', 'S (эс)', 'Z (зед)', 'X (икс)'],
@@ -194,7 +194,7 @@ export const module2Exercises: Exercise[] = [
   {
     id: 20,
     type: 'choice',
-    question: 'Послушай букву T и слово Tortue (черепаха)',
+    question: 'Ascultă litera T și cuvântul Tortue (broască)',
     image: '🐢',
     display: 'T - Tortue',
     options: ['D (дэ)', 'T (тэ)', 'P (пэ)', 'B (бэ)'],
@@ -204,7 +204,7 @@ export const module2Exercises: Exercise[] = [
   {
     id: 21,
     type: 'choice',
-    question: 'Послушай букву U и слово Uniforme (униформа)',
+    question: 'Ascultă litera U și cuvântul Uniforme (uniformă)',
     image: '👔',
     display: 'U - Uniforme',
     options: ['U (ю)', 'V (вэ)', 'O (о)', 'I (и)'],
@@ -214,7 +214,7 @@ export const module2Exercises: Exercise[] = [
   {
     id: 22,
     type: 'choice',
-    question: 'Послушай букву V и слово Violon (скрипка)',
+    question: 'Ascultă litera V și cuvântul Violon (vioară)',
     image: '🎻',
     display: 'V - Violon',
     options: ['F (эф)', 'V (вэ)', 'W (дубль вэ)', 'B (бэ)'],
@@ -224,7 +224,7 @@ export const module2Exercises: Exercise[] = [
   {
     id: 23,
     type: 'choice',
-    question: 'Послушай букву W и слово Wagon (вагон)',
+    question: 'Ascultă litera W și cuvântul Wagon (vagon)',
     image: '🚃',
     display: 'W - Wagon',
     options: ['V (вэ)', 'W (дубль вэ)', 'M (эм)', 'U (ю)'],
@@ -234,7 +234,7 @@ export const module2Exercises: Exercise[] = [
   {
     id: 24,
     type: 'choice',
-    question: 'Послушай букву X и слово Xylophone (ксилофон)',
+    question: 'Ascultă litera X și cuvântul Xylophone (xilofon)',
     image: '🎵',
     display: 'X - Xylophone',
     options: ['X (икс)', 'K (ка)', 'Z (зед)', 'S (эс)'],
@@ -244,7 +244,7 @@ export const module2Exercises: Exercise[] = [
   {
     id: 25,
     type: 'choice',
-    question: 'Послушай букву Y и слово Yaourt (йогурт)',
+    question: 'Ascultă litera Y și cuvântul Yaourt (iaurt)',
     image: '🥛',
     display: 'Y - Yaourt',
     options: ['I (и)', 'J (жи)', 'Y (игрек)', 'U (ю)'],
@@ -254,7 +254,7 @@ export const module2Exercises: Exercise[] = [
   {
     id: 26,
     type: 'choice',
-    question: 'Послушай букву Z и слово Zèbre (зебра)',
+    question: 'Ascultă litera Z și cuvântul Zèbre (zebră)',
     image: '🦓',
     display: 'Z - Zèbre',
     options: ['S (эс)', 'X (икс)', 'Z (зед)', 'C (сэ)'],
